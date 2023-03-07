@@ -1,4 +1,4 @@
-package hello.proxy.jdkdynamic.code;
+package hello.proxy.jdkdynamic.oode;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -17,6 +17,7 @@ public class TimeInvocationHandler implements InvocationHandler {
         log.info("TimeProxy 실행");
         long startTime = System.currentTimeMillis();
         Object result = method.invoke(target, args);
+
         long endTime = System.currentTimeMillis();
         long resultTime = endTime - startTime;
         log.info("TimeProxy 종료 resultTime={}", resultTime);

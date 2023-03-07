@@ -1,4 +1,4 @@
-package hello.proxy.jdkdynamic.code;
+package hello.proxy.jdkdynamic.oode;
 
 public interface BInterface {
     String call();

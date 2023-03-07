@@ -1,4 +1,4 @@
-package hello.proxy.jdkdynamic.code;
+package hello.proxy.jdkdynamic.oode;
 
 import lombok.extern.slf4j.Slf4j;
 
