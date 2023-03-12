@@ -7,6 +7,10 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 public class LogTraceBasicHandler implements InvocationHandler {
+<<<<<<< HEAD
+=======
+
+>>>>>>> bacfb74 (InvocationHandler 추가)
     private final Object target;
     private final LogTrace logTrace;
 
