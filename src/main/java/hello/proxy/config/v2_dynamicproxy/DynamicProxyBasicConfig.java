@@ -14,14 +14,9 @@ public class DynamicProxyBasicConfig {
     @Bean
     public OrderControllerV1 orderControllerV1(LogTrace logTrace) {
         OrderControllerV1 orderController = new OrderControllerV1Impl(orderServiceV1(logTrace));
-<<<<<<< HEAD
-
-        OrderControllerV1 proxy = (OrderControllerV1) Proxy.newProxyInstance(OrderControllerV1.class.getClassLoader(),
+        OrderControllerV1 proxy = (OrderControllerV1) Proxy.newProxyInstance(
+                OrderControllerV1.class.getClassLoader(),
                 new Class[] {OrderControllerV1.class},
-=======
-        OrderControllerV1 proxy = (OrderControllerV1) Proxy.newProxyInstance(OrderControllerV1.class.getClassLoader(),
-                new Class[]{OrderControllerV1.class},
->>>>>>> bacfb74 (InvocationHandler 추가)
                 new LogTraceBasicHandler(orderController, logTrace)
         );
         return proxy;
@@ -30,13 +25,10 @@ public class DynamicProxyBasicConfig {
     @Bean
     public OrderServiceV1 orderServiceV1(LogTrace logTrace) {
         OrderServiceV1 orderService = new OrderServiceV1Impl(orderRepositoryV1(logTrace));
-        OrderServiceV1 proxy = (OrderServiceV1) Proxy.newProxyInstance(OrderServiceV1.class.getClassLoader(),
-<<<<<<< HEAD
-                new Class[] {OrderServiceV1.class}, new LogTraceBasicHandler(orderService, logTrace)
-=======
-                new Class[]{OrderServiceV1.class},
+        OrderServiceV1 proxy = (OrderServiceV1) Proxy.newProxyInstance(
+                OrderServiceV1.class.getClassLoader(),
+                new Class[] {OrderServiceV1.class},
                 new LogTraceBasicHandler(orderService, logTrace)
->>>>>>> bacfb74 (InvocationHandler 추가)
         );
         return proxy;
     }
@@ -50,8 +42,5 @@ public class DynamicProxyBasicConfig {
         );
         return proxy;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> bacfb74 (InvocationHandler 추가)
 }
